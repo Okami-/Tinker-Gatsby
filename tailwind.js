@@ -195,6 +195,7 @@ module.exports = {
 
   fonts: {
     sans: [
+      'Nunito',
       'Open Sans',
       '-apple-system',
       'BlinkMacSystemFont',
@@ -450,6 +451,7 @@ module.exports = {
     '32': '8rem',
     '48': '12rem',
     '64': '16rem',
+    '80': '20rem',
     '1/2': '50%',
     '1/3': '33.33333%',
     '2/3': '66.66667%',
@@ -641,6 +643,8 @@ module.exports = {
     '4': '1rem',
     '6': '1.5rem',
     '8': '2rem',
+    '10': '2.5rem',
+    '20': '10.5rem',
   },
 
   /*
