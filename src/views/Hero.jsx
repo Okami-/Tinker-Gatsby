@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   ${tw`w-full xl:w-2/3`};
 `
 
-const Hero = ({ children, offset, scrollToContent }) => (
+const Hero = ({ children, offset }) => (
   <>
     <Divider speed={0.2} offset={offset}>
     </Divider>
@@ -25,7 +25,6 @@ const Hero = ({ children, offset, scrollToContent }) => (
 export default Hero
 
 Hero.propTypes = {
-  scrollToContent: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
   offset: PropTypes.number.isRequired,
 }

@@ -2,11 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import tw from 'tailwind.macro'
 import { Parallax } from 'react-spring/addons.cjs'
+import styles from './Index.module.scss'
 
 // Components
 import Layout from '../components/Layout'
 import ProjectCard from '../components/ProjectCard'
 import PageDivider from '../components/PageDivider'
+import ClientCard from '../components/ClientCard'
 
 // Elements
 import Inner from '../elements/Inner'
@@ -17,12 +19,26 @@ import Hero from '../views/Hero'
 import Projects from '../views/Projects'
 import About from '../views/About'
 import Contact from '../views/Contact'
+import Clients from '../views/Clients'
 
 import avatar from '../images/avatar.jpg'
 import websiteface from '../images/websiteface.svg'
-import downarrow from '../images/Arrow-down.svg'
 
 const ProjectsWrapper = styled.div`
+  ${tw`flex flex-wrap justify-between mt-8`};
+  display: grid;
+  grid-gap: 4rem;
+  grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 1200px) {
+    grid-gap: 3rem;
+  }
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+`
+
+const ClientsWrapper = styled.div`
   ${tw`flex flex-wrap justify-between mt-8`};
   display: grid;
   grid-gap: 4rem;
@@ -51,6 +67,7 @@ const HeroImage = styled.img`
 const DownArrow = styled.img`
   ${tw`w-16 ml-auto mr-auto block`}
 `
+
 const ScrollText = styled.p`
   ${tw`text-center mt-10 lg:mt-20 font-sans font-bold`}
 `
@@ -64,7 +81,10 @@ const AboutDesc = styled.p`
 `
 
 const ContactText = styled.p`
-  ${tw`text-grey-light font-sans text-xl md:text-2xl lg:text-3xl`};
+  ${tw`text-black font-sans text-xl md:text-2xl lg:text-3xl`};
+`
+const ContactTitle = styled.h1`
+  ${tw`text-black font-sans text-xl md:text-2xl lg:text-3xl`};
 `
 
 const Footer = styled.footer`
@@ -72,56 +92,53 @@ const Footer = styled.footer`
 `
 
 class Index extends React.Component {
-  separator = React.createRef();
-
   render() {
     return (
       <>
         <Layout />
         <Parallax pages={5}>
           <PageDivider />
-          <Hero offset={0} scrollToContent={this.scrollToContent}>
+          <Hero offset={0}>
             <HeroImage src={websiteface} alt="Richard Illustrated Picture" />
             <BigTitle>
               Hi! I'm Richard.
             </BigTitle>
             <Subtitle>I'm a software consultant based in the San Francisco Bay Area.</Subtitle>
             <ScrollText>SCROLL</ScrollText>
-            <DownArrow src={downarrow} />
+            <div className={styles.iconscroll}></div>
           </Hero>
           <Projects offset={1}>
             <Title>Projects</Title>
             <ProjectsWrapper>
               <ProjectCard
-                title="Freiheit"
-                link="https://www.behance.net/gallery/58937147/Freiheit"
+                title="UCSF.EDU"
+                link="https://www.ucsf.edu"
                 bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
               >
-                This project is my entry to Adobe's #ChallengeYourPerspective contest.
-          </ProjectCard>
+                On this project I was a key member of the design and development of UCSF's redesign project.
+              </ProjectCard>
               <ProjectCard
-                title="Harry Potter"
-                link="https://www.behance.net/gallery/52915793/Harry-Potter"
+                title="Quicksoft CRM"
+                link="https://www.behance.net/gallery/75369603/Quicksoft-CRM?"
                 bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
               >
-                I entered the DOCMA 2017 award with this Harry Potter inspired image.
-          </ProjectCard>
-              <ProjectCard
-                title="Tomb Raider"
-                link="https://www.behance.net/gallery/43907099/Tomb-Raider"
-                bg="linear-gradient(to right, #009245 0%, #FCEE21 100%)"
-              >
-                Recreation of a Tomb Raider Wallpaper (Fan Art)
-          </ProjectCard>
-              <ProjectCard
-                title="Eagle"
-                link="https://www.behance.net/gallery/38068151/Eagle"
-                bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
-              >
-                A fantasy image manipulation relocating the habitat of wild animals.
-          </ProjectCard>
+                This project was built with React from the ground up. Redux was used for state management.
+              </ProjectCard>
             </ProjectsWrapper>
           </Projects>
+          <Clients offset={2}>
+            <Title>Clients</Title>
+            <ClientsWrapper>
+              <ClientCard
+                photo={avatar} alt="Stevie"
+                children="Richard is a wizard when it comes to front-end development. I've relied on him for countless projects and he's always delivered."
+                title="Steve Botella (CEO Quicksoft)"
+                link="https://www.behance.net/gallery/75369603/Quicksoft-CRM?"
+                bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
+              >
+              </ClientCard>
+            </ClientsWrapper>
+          </Clients>
           <About offset={3}>
             <Title>About</Title>
             <AboutHero>
@@ -136,15 +153,12 @@ class Index extends React.Component {
               make me your campaign manager. I was born for politics. I have great hair and I love lying. Captain? The kids
               want to know where Paulie the Pigeon is. I told them he got sucked up into an airplane engine, is that all
               right?
-        </AboutDesc>
+            </AboutDesc>
           </About>
           <Contact offset={4}>
             <Inner>
-              <Title>Get in touch</Title>
+              <ContactTitle>Get in touch</ContactTitle>
               <ContactText>
-                Say <a href="mailto:plizNoSp4m@domain.tld">Hi</a> or find me on other platforms:{' '}
-                <a href="https://dribbble.com/LekoArts">Dribbble</a> &{' '}
-                <a href="https://www.instagram.com/lekoarts.de/">Instagram</a>
               </ContactText>
             </Inner>
             <Footer>
