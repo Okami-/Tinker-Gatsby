@@ -33,7 +33,7 @@ const Name = styled.div`
 `
 
 const ClientCard = ({ title, children, bg, photo, name }) => (
-  <Wrapper target="_blank" rel="noopener noreferrer" bg={bg}>
+  <Wrapper bg={bg}>
     <Photo src={photo}></Photo>
     <Text>{children}</Text>
     <Name>{name}</Name>

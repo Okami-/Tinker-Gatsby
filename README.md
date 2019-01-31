@@ -1,8 +1,7 @@
-![](https://i.imgur.com/hWB1XRO.png)
 
-# Gatsby Starter Portfolio: Cara
+# Tinker Portfolio Website Using Gatsby 
 
-A portfolio starter for [Gatsby](https://www.gatsbyjs.org/). The target audience are designers and photographers.
+My portfolio website using [Gatsby](https://www.gatsbyjs.org/). 
 
 [Demo Website](https://cara.lekoarts.de)
 

@@ -73,7 +73,7 @@ const ScrollText = styled.p`
 `
 
 const AboutSub = styled.span`
-  ${tw`text-white pt-12 lg:pt-0 lg:pl-12 text-2xl lg:text-3xl xl:text-4xl`};
+  ${tw`text-white pt-12 lg:pt-0 lg:pl-12 text-2xl lg:text-3xl xl:text-4xl font-sans`};
 `
 
 const AboutDesc = styled.p`
@@ -132,13 +132,13 @@ class Index extends React.Component {
             <ClientsWrapper>
               <ClientCard
                 photo={stevie} alt="Stevi botella Photo"
-                children="Richard is a wizard when it comes to front-end development. I've relied on him for countless projects and he's always delivered."
+                children="&quot;Richard is a wizard when it comes to front-end development. I've relied on him for countless projects and he's always delivered.&quot;"
                 title="Steve Botella (CEO Quicksoft)"
                 bg="#FFFFFF"
-              > </ClientCard>
+              ></ClientCard>
               <ClientCard
                 photo={john} alt="John Kealy Photo"
-                children="Richard is a wizard when it comes to front-end development. I've relied on him for countless projects and he's always delivered."
+                children="&quot;His design aesthetic is impeccable, his programming ability unmatched, and his hard work and integrity is paramount. Richard is the only developer I'd consider for my next project&quot;"
                 title="John Kealy (UCSF)"
                 bg="#FFFFFF"
               ></ClientCard>
@@ -149,15 +149,12 @@ class Index extends React.Component {
             <AboutHero>
               <Avatar src={avatar} alt="John Doe" />
               <AboutSub>
-                Developer, gamer, and entrepreneur.
+                Developer and entrepreneur.
           </AboutSub>
             </AboutHero>
             <AboutDesc>
-              You know the way you feel when you see a picture of two otters holding hands? That's how you're gonna feel
-              every day. My mother cried the day I was born because she knew she’d never be prettier than me. You should
-              make me your campaign manager. I was born for politics. I have great hair and I love lying. Captain? The kids
-              want to know where Paulie the Pigeon is. I told them he got sucked up into an airplane engine, is that all
-              right?
+              I began web development at the age of sixteen creating custom themes for Myspace pages. I was always interested in design so I went to the SFAI for web design and begin my journey there. Design had a huge impact on my career and exposed me to the full process of product development. In 2009 I started my own web company and through those failures, I learned many things about software engineering and freelancing. I snatched up a great opportunity with UCSF and learned bountiful things about information systems, computer science, and business management. So here I am now with Tinker, my modest sole proprietorship, taking everything I learned and providing the best software consulting I can!
+              Hit me up with a message with any questions you may have or just to say hi.
             </AboutDesc>
           </About>
           <Contact offset={4}>

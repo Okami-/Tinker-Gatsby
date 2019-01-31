@@ -9,13 +9,16 @@ import { UpDown, UpDownWide, waveAnimation } from '../styles/animations'
 import { colors } from '../../tailwind'
 import SVG from '../components/SVG'
 
-
-
 const Contact = ({ children, offset }) => (
   <>
-    <ContactContent speed={0.8} offset={offset}>
+    <Divider
+      bg="#D6DAFF"
+      speed={0}
+      offset={offset}
+    />
+    <Content speed={0.8} offset={offset}>
       {children}
-    </ContactContent>
+    </Content>
   </>
 )
 
