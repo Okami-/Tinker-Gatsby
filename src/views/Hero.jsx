@@ -14,9 +14,13 @@ const Wrapper = styled.div`
 
 const Hero = ({ children, offset }) => (
   <>
-    <Divider speed={0.2} offset={offset}>
-    </Divider>
-    <Content speed={0.4} offset={offset}>
+    <Divider
+      bg="#FFFFFF"
+      speed={0}
+      offset={0}
+      factor={1}
+    />
+    <Content speed={0.1} offset={offset}>
       <Wrapper>{children}</Wrapper>
     </Content>
   </>

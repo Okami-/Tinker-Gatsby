@@ -119,7 +119,7 @@ const colors = {
   'purple-darker': '#352465',
   'purple-dark': '#794acf',
   purple: '#9561e2',
-  'purple-light': '#a779e9',
+  'purple-light': '#D6DAFF',
   'purple-lighter': '#d6bbfc',
   'purple-lightest': '#f3ebff',
 

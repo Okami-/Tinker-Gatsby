@@ -86,7 +86,6 @@ const Head = props => {
       <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png" />
       <meta name="gatsby-starter" content="Gatsby Starter Portfolio Cara" />
       <link rel="shortcut icon" href="favicon.ico" />
-      <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800" rel="stylesheet"></link>
       <meta name="msapplication-TileColor" content={config.backgroundColor} />
       <meta name="msapplication-config" content="browserconfig.xml" />
       <meta name="description" content={description} />

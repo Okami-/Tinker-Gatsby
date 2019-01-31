@@ -9,10 +9,12 @@ import Layout from '../components/Layout'
 import ProjectCard from '../components/ProjectCard'
 import PageDivider from '../components/PageDivider'
 import ClientCard from '../components/ClientCard'
+import ContactForm from '../components/ContactForm'
 
 // Elements
 import Inner from '../elements/Inner'
 import { Title, BigTitle, Subtitle } from '../elements/Titles'
+import ContactInner from '../elements/ContactInner'
 
 // Views
 import Hero from '../views/Hero'
@@ -22,7 +24,9 @@ import Contact from '../views/Contact'
 import Clients from '../views/Clients'
 
 import avatar from '../images/avatar.jpg'
+import john from '../images/john-kealy.png'
 import websiteface from '../images/websiteface.svg'
+import stevie from '../images/stevie.png'
 
 const ProjectsWrapper = styled.div`
   ${tw`flex flex-wrap justify-between mt-8`};
@@ -61,11 +65,7 @@ const Avatar = styled.img`
 `
 
 const HeroImage = styled.img`
-  ${tw`w-64 xl:w-80 h-auto m-auto block lg:float-right clearfix`}
-`
-
-const DownArrow = styled.img`
-  ${tw`w-16 ml-auto mr-auto block`}
+  ${tw`w-48 xl:w-80 h-auto m-auto block lg:float-right clearfix`}
 `
 
 const ScrollText = styled.p`
@@ -83,6 +83,7 @@ const AboutDesc = styled.p`
 const ContactText = styled.p`
   ${tw`text-black font-sans text-xl md:text-2xl lg:text-3xl`};
 `
+
 const ContactTitle = styled.h1`
   ${tw`text-black font-sans text-xl md:text-2xl lg:text-3xl`};
 `
@@ -130,13 +131,17 @@ class Index extends React.Component {
             <Title>Clients</Title>
             <ClientsWrapper>
               <ClientCard
-                photo={avatar} alt="Stevie"
+                photo={stevie} alt="Stevi botella Photo"
                 children="Richard is a wizard when it comes to front-end development. I've relied on him for countless projects and he's always delivered."
                 title="Steve Botella (CEO Quicksoft)"
-                link="https://www.behance.net/gallery/75369603/Quicksoft-CRM?"
-                bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
-              >
-              </ClientCard>
+                bg="#FFFFFF"
+              > </ClientCard>
+              <ClientCard
+                photo={john} alt="John Kealy Photo"
+                children="Richard is a wizard when it comes to front-end development. I've relied on him for countless projects and he's always delivered."
+                title="John Kealy (UCSF)"
+                bg="#FFFFFF"
+              ></ClientCard>
             </ClientsWrapper>
           </Clients>
           <About offset={3}>
@@ -156,11 +161,10 @@ class Index extends React.Component {
             </AboutDesc>
           </About>
           <Contact offset={4}>
-            <Inner>
+            <ContactInner>
               <ContactTitle>Get in touch</ContactTitle>
-              <ContactText>
-              </ContactText>
-            </Inner>
+              <ContactForm></ContactForm>
+            </ContactInner>
             <Footer>
               &copy; 2019 Tinker{' '}
             </Footer>

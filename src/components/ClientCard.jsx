@@ -14,12 +14,12 @@ const Wrapper = styled.a`
 `
 
 const Text = styled.div`
-  ${tw`opacity-75 font-sans text-sm md:text-base`};
+  ${tw`opacity-75 font-sans text-lg md:text-base text-black`};
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 `
 
 const Title = styled.div`
-  ${tw`text-white uppercase text-2xl md:text-3xl xl:text-4xl tracking-wide font-sans pt-8`};
+  ${tw`text-black uppercase text-2xl md:text-3xl xl:text-4xl tracking-wide font-sans pt-8`};
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 `
 
@@ -28,25 +28,24 @@ const Photo = styled.img`
 `
 
 const Name = styled.div`
-  ${tw`text-white uppercase text-2xl md:text-3xl xl:text-4xl tracking-wide font-sans pt-8`};
+  ${tw`text-black uppercase text-2xl md:text-3xl xl:text-4xl tracking-wide font-sans pt-8`};
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 `
 
-const ClientCard = ({ title, link, children, bg, photo, name }) => (
-    <Wrapper href={link} target="_blank" rel="noopener noreferrer" bg={bg}>
-        <Photo src={photo}></Photo>
-        <Text>{children}</Text>
-        <Name>{name}</Name>
-        <Title>{title}</Title>
-    </Wrapper>
+const ClientCard = ({ title, children, bg, photo, name }) => (
+  <Wrapper target="_blank" rel="noopener noreferrer" bg={bg}>
+    <Photo src={photo}></Photo>
+    <Text>{children}</Text>
+    <Name>{name}</Name>
+    <Title>{title}</Title>
+  </Wrapper>
 )
 
 export default ClientCard
 
 ClientCard.propTypes = {
-    title: PropTypes.string.isRequired,
-    photo: PropTypes.element.isRequired,
-    link: PropTypes.string.isRequired,
-    children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
-    bg: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  photo: PropTypes.element.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
+  bg: PropTypes.string.isRequired,
 }

@@ -11,6 +11,6 @@ export const Divider = styled(ParallaxLayer)`
   clip-path: ${props => props.clipPath};
 `
 
-export const DividerMiddle = styled(Divider)`
-  clip-path: polygon(0 15%, 100% 25%, 100% 85%, 0 75%);
+export const DividerMiddle = styled(ParallaxLayer)`
+  display: flex;
 `

@@ -9,17 +9,15 @@ import SVG from '../components/SVG'
 
 const Clients = ({ children, offset }) => (
     <>
-        <DividerMiddle
-            bg="linear-gradient(to right, SlateBlue 0%, #D6DAFF)"
-            speed={-0.2}
-            offset={`${offset}.09`}
-            factor={1.2}
+        <Divider
+            bg="#66a2f2"
+            speed={-0}
+            offset={offset}
         />
-        <Content speed={0.4} offset={`${offset}.1`} factor={1}>
+        <Content speed={0.8} offset={2} factor={1}>
             <Inner>{children}</Inner>
         </Content>
-        <Divider speed={0.1} offset={offset} factor={2}>
-        </Divider>
+
     </>
 )
 
