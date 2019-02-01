@@ -12,7 +12,6 @@ import ClientCard from '../components/ClientCard'
 import ContactForm from '../components/ContactForm'
 
 // Elements
-import Inner from '../elements/Inner'
 import { Title, BigTitle, Subtitle } from '../elements/Titles'
 import ContactInner from '../elements/ContactInner'
 
