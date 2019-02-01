@@ -26,6 +26,8 @@ import avatar from '../images/avatar.jpg'
 import john from '../images/john-kealy.png'
 import websiteface from '../images/websiteface.svg'
 import stevie from '../images/stevie.png'
+import github from '../images/github-logo.png'
+import linkedin from '../images/LinkedIn_logo_In-Black.svg'
 
 const ProjectsWrapper = styled.div`
   ${tw`flex flex-wrap justify-between mt-8`};
@@ -89,6 +91,15 @@ const ContactTitle = styled.h1`
 
 const Footer = styled.footer`
   ${tw`text-center text-grey absolute pin-b p-6 font-sans text-md lg:text-lg`};
+`
+
+const LinkedIn = styled.img`
+  ${tw`ml-auto mr-auto block clearfix content-center float-left`}
+  width: 54px;
+`
+const Github = styled.img`
+  ${tw`block clearfix`}
+  width: 54px;
 `
 
 class Index extends React.Component {
@@ -160,6 +171,8 @@ class Index extends React.Component {
             <ContactInner>
               <ContactTitle>Get in touch</ContactTitle>
               <ContactForm></ContactForm>
+              <a target="_blank" href="https://www.linkedin.com/in/richard-baker-64326639/"><LinkedIn src={linkedin} /></a>
+              <a target="_blank" href="https://github.com/Okami-"><Github src={github} /></a>
             </ContactInner>
             <Footer>
               &copy; 2019 Tinker{' '}
